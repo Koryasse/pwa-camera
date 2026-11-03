@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PhotoFiltre</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>PhotoFiltre</h1>
+
+  <div class="cam">
+    <video id="video" autoplay playsinline></video>
+    <button id="btnPhoto" aria-label="Prendre une photo"></button>
+  </div>
+
+  <div>
+    <button data-filter="none">Normal</button>
+    <button data-filter="grayscale(1)">Noir & blanc</button>
+    <button data-filter="sepia(1)">Sépia</button>
+    <button data-filter="invert(1)">Négatif</button>
+    <button data-filter="hue-rotate(180deg) saturate(3)">Pop</button>
+  </div>
+
+  <canvas id="canvas"></canvas>
+  <img id="photo" alt="Photo prise">
+  <div><a id="download" download="photo.png" style="display:none"><button>Télécharger</button></a></div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
